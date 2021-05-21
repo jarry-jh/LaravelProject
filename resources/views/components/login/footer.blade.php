@@ -1,3 +1,0 @@
-<div>
-    Footer Part...
-</div>
