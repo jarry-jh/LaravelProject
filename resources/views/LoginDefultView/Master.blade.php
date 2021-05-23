@@ -17,13 +17,16 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom Css -->
+<link rel="stylesheet" href="{{asset('/public/LoginAssets/css/app.css')}}">
+
 </head>
 <body>
-{{View::make("LoginDefultView.Header")}}
+<!-- {{View::make("LoginDefultView.Header")}} -->
 
 @yield("content") 
 
-{{View::make("LoginDefultView.Footer")}}
+<!-- {{View::make("LoginDefultView.Footer")}} -->
 
 </body>
 </html>
