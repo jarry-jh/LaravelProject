@@ -15,7 +15,8 @@ class LoginController extends Controller
     }
 
     public function loginCheck(Request $req){
-        return registers::where(['login_id'=>$req->login_id])->first();
+        // return $req->input();
+        return registers::where([['login_id'=>$req->login_id] && ['password'=>$req->password]])->first();
         // return $match;
     }
 }
