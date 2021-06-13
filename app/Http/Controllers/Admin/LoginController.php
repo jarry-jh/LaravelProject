@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\registers;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -16,7 +17,9 @@ class LoginController extends Controller
 
     public function loginCheck(Request $req){
         // return $req->input();
-        return registers::where([['login_id'=>$req->login_id] && ['password'=>$req->password]])->first();
-        // return $match;
+        $match_data=User::where(['login_id'=>$req->login_id])->first();
+        if($match_data!="" && Hash::check($req->password, $match_data->login_password)){
+            
+        }
     }
 }
